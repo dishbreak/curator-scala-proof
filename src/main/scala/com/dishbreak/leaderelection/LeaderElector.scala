@@ -55,9 +55,8 @@ object LeaderElector {
   private val zookeeperUrl = System.getProperty("zookeeper.url")
 
   def main(args: Array[String]): Unit = {
-    println("Hello World!")
     val uniqueId = randomUUID().toString
-
+    println(s"I am instance $uniqueId")
     val elector = new LeaderElector(uniqueId, zookeeperUrl)
     elector.start()
 
