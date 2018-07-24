@@ -52,7 +52,7 @@ class LeaderElector(uuid: String, zookeeperUrl: String) {
 }
 
 object LeaderElector {
-  val zookeeperUrl = "192.168.99.100:2181"
+  private val zookeeperUrl = System.getProperty("zookeeper.url")
 
   def main(args: Array[String]): Unit = {
     println("Hello World!")
